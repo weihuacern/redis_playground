@@ -1,1 +1,1 @@
-# redis_playground
+# Redis Playground

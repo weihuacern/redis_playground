@@ -2,7 +2,8 @@
 
 ### Redis Docker Image
 ```
-docker-compose -f ./docker-compose.yml up -d
+docker-compose -f ./redis-compose.yml build
+docker-compose -f ./redis-compose.yml up -d
 ```
 
 ### Redis python driver

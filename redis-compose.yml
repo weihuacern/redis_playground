@@ -3,7 +3,7 @@ services:
   redis_master:
     ##image: redis
     build:
-      context: .
+      context: ./redis/
       args:
         REDIS_VERSION: ${REDIS_VERSION}
       dockerfile: Dockerfile

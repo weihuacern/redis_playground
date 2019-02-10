@@ -42,3 +42,15 @@ services:
     command: /bin/bash -c "sleep 2 && redis-server --port 6381 --slaveof redis_master 6379"
     depends_on: 
       - redis_master
+  redis_ui:
+    build:
+      context: ./rdm/
+      dockerfile: Dockerfile
+    container_name: redis_ui
+    env_file:
+      - ./.env
+    ports:
+      - "6379:6379"
+    restart: always
+    expose:
+      - 6379
